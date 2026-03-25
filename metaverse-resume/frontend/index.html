@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metaverse Resume | Senior 3D Engineer</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- UI Overlay Layer -->
+    <div id="ui-layer" class="hidden">
+      
+      <!-- Top Bar: Recruiter Mode & Nav Hints -->
+      <header>
+        <div class="logo">META-RESUME <span class="badge">PRO</span></div>
+        <div class="controls">
+          <button id="btn-recruiter-mode" class="glass-btn primary-glow">
+            <span class="icon">✨</span> Auto-Tour (Recruiter Mode)
+          </button>
+        </div>
+      </header>
+
+      <!-- Impact Visualization Stats (Hidden by default, shown via Raycaster/Intro) -->
+      <aside id="impact-panel" class="glass-panel slide-out">
+        <h3>System Impact</h3>
+        <div class="stat-list">
+          <div class="stat-item">
+            <span class="stat-value">40%</span>
+            <span class="stat-label">Load Time Reduction</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">120ms</span>
+            <span class="stat-label">Real-time AI Latency</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">60 FPS</span>
+            <span class="stat-label">Stable Rendering</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- AI Chat Interface -->
+      <div id="ai-chat-interface" class="glass-panel">
+        <div class="chat-header">
+          <div class="avatar-glow"></div>
+          <div>
+            <h4>Creator AI</h4>
+            <span class="status">Online • Memory Active</span>
+          </div>
+        </div>
+        
+        <div id="chat-history" class="chat-history">
+          <div class="message ai-msg">
+            Initiating Neural Link... I am the AI representation of the creator. I combine technical execution with product thinking. Ask me anything, or type "Why should we hire you?".
+          </div>
+        </div>
+
+        <div class="chat-input-area">
+          <button id="btn-voice" class="voice-btn" title="Speak to AI">
+            🎤
+          </button>
+          <input type="text" id="chat-input" placeholder="Ask me something..." autocomplete="off">
+          <button id="btn-send" class="send-btn">⮑</button>
+        </div>
+      </div>
+
+      <!-- Navigation Crosshair -->
+      <div id="crosshair"></div>
+
+      <!-- Instructions Overlay -->
+      <div id="instructions" class="glass-panel centered">
+        <h1>ENTER THE EXPERIENCE</h1>
+        <p>I build experiences that users remember. Not just features.</p>
+        <div class="keys">
+          <span>W A S D</span> to Move <br>
+          <span>🖱️ Mouse</span> to Look <br>
+          <span>Click</span> to Start
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Init Script -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
